@@ -138,7 +138,6 @@
             <div class="hero-description">${paragraphs(club.description)}</div>
           </div>
           <aside class="hero-panel">
-            <span class="eyebrow">行动纲领</span>
             <h2>TIDE 俱乐部行动纲领</h2>
             <div class="mission-mini-grid">
               ${missions.map((mission, index) => {
@@ -157,7 +156,7 @@
           <div class="section-header">
             <span class="eyebrow">Join TIDE</span>
             <h2>加入我们</h2>
-            <p class="lead">无论你想加入正在招募的项目、发起成熟 idea，还是从初步想法开始寻找伙伴，TIDE 都欢迎你的投递。</p>
+            <p class="lead">无论你是对正在招募的项目感兴趣想加入到项目团队中一起共同协作，还是已有一个比较成熟的idea想自己组建团队合作互助，亦或是从一个初步的想法开始寻找伙伴共同对一个话题钻研探索，TIDE 欢迎所有怀揣这些想法和热情的同学通过申请问卷进行投递报名并加入我们。</p>
           </div>
           <div class="guide-list">
             ${guideSteps.map((step, index) => `<article class="card guide-card">
@@ -175,10 +174,9 @@
           <div class="section-header">
             <span class="eyebrow">Project-based Practice</span>
             <h2>项目招募中</h2>
-            <p class="lead">围绕真实产业、校园组织与技术工具链问题，用项目制方式完成学习、研发、协作与展示。</p>
             ${renderCountdown()}
           </div>
-          <div class="grid grid-3">
+          <div class="grid grid-3 home-project-grid">
             ${projects.map(project => projectCard(project)).join('')}
           </div>
           <div style="text-align:center;margin-top:28px;">${btn('#/projects', '查看全部项目', 'secondary')}</div>
