@@ -132,7 +132,6 @@
         <div class="hero-bg"></div>
         <div class="container hero-inner">
           <div class="hero-copy">
-            <span class="eyebrow">青年学生实践平台</span>
             <h1>${esc(club.name || 'TIDE Club')}</h1>
             <p class="hero-slogan">${esc(club.slogan || 'Technology and Innovation in Digital Era')}</p>
             <div class="hero-description">${paragraphs(club.description)}</div>
@@ -154,7 +153,6 @@
       <section class="section" style="background:#fff;">
         <div class="container">
           <div class="section-header">
-            <span class="eyebrow">Join TIDE</span>
             <h2>加入我们</h2>
             <p class="lead">无论你是对正在招募的项目感兴趣想加入到项目团队中一起共同协作，还是已有一个比较成熟的idea想自己组建团队合作互助，亦或是从一个初步的想法开始寻找伙伴共同对一个话题钻研探索，TIDE 欢迎所有怀揣这些想法和热情的同学通过申请问卷进行投递报名并加入我们。</p>
           </div>
@@ -172,7 +170,6 @@
       <section class="section">
         <div class="container">
           <div class="section-header">
-            <span class="eyebrow">Project-based Practice</span>
             <h2>项目招募中</h2>
             ${renderCountdown()}
           </div>
@@ -193,7 +190,6 @@
         <div class="container">
           <div class="breadcrumb"><a href="#/">首页</a><span>/</span><span>项目列表</span></div>
           <div class="page-title">
-            <span class="eyebrow">Projects</span>
             <h1 style="font-size:clamp(34px,4vw,52px);">TIDE 项目列表</h1>
             <p class="lead" style="margin-top:14px;">查找正在展示和招募的项目，进入项目详情页查看岗位、目标、产出与报名入口。</p>
           </div>
