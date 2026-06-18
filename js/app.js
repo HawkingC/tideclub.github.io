@@ -5,7 +5,6 @@
 
   const APPLY_LINK_DEFAULT = 'https://tideclub26.feishu.cn/share/base/form/shrcnYVMC76jFL0oD5ChfRJbBff';
   const APPLY_LINK_YUHONG = 'https://tideclub26.feishu.cn/share/base/form/shrcnlmjpcnAIq55M84kT2YtrTe';
-  const LEARN_MORE_LINK = 'https://tideclub26.feishu.cn/docx/Si2bd5XARomUXHxIp0EcDlyLnHh';
   const PROJECT_PORTAL_LINK = 'https://tideclub26.aiforce.cloud/app/app_4k70fuutr5nxe';
   const DEADLINE = new Date('2026-06-14T12:00:00+08:00').getTime();
 
@@ -137,15 +136,6 @@
             <h1>${esc(club.name || 'TIDE Club')}</h1>
             <p class="hero-slogan">${esc(club.slogan || 'Technology and Innovation in Digital Era')}</p>
             <div class="hero-description">${paragraphs(club.description)}</div>
-            <div class="hero-actions">
-              ${btn('#/projects', '浏览项目', 'primary')}
-              ${btn(LEARN_MORE_LINK, '了解更多', 'secondary')}
-            </div>
-            <div class="stat-row">
-              <div class="stat"><strong>${esc((club.universities || []).length)}</strong><span>合作院校与机构</span></div>
-              <div class="stat"><strong>${esc((club.industries || []).length)}</strong><span>产业合作方向</span></div>
-              <div class="stat"><strong>${esc(projects.length)}</strong><span>项目方向</span></div>
-            </div>
           </div>
           <aside class="hero-panel">
             <span class="eyebrow">行动纲领</span>
@@ -159,21 +149,6 @@
               }).join('')}
             </div>
           </aside>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Project-based Practice</span>
-            <h2>项目方向</h2>
-            <p class="lead">围绕真实产业、校园组织与技术工具链问题，用项目制方式完成学习、研发、协作与展示。</p>
-            ${renderCountdown()}
-          </div>
-          <div class="grid grid-3">
-            ${projects.map(project => projectCard(project)).join('')}
-          </div>
-          <div style="text-align:center;margin-top:28px;">${btn('#/projects', '查看全部项目', 'secondary')}</div>
         </div>
       </section>
 
@@ -198,21 +173,15 @@
       <section class="section">
         <div class="container">
           <div class="section-header">
-            <span class="eyebrow">Ecosystem</span>
-            <h2>合作生态</h2>
-            <p class="lead">依托多所海内外高校学术资源，联合行业企业，构建产学研协同创新网络。</p>
+            <span class="eyebrow">Project-based Practice</span>
+            <h2>项目招募中</h2>
+            <p class="lead">围绕真实产业、校园组织与技术工具链问题，用项目制方式完成学习、研发、协作与展示。</p>
+            ${renderCountdown()}
           </div>
-          <div class="grid grid-2">
-            <div class="card card-pad">
-              <h3>合作院校与机构</h3>
-              <div class="pill-row" style="margin-top:18px;">${(club.universities || []).map(item => `<span class="pill">🎓 ${esc(item)}</span>`).join('')}</div>
-            </div>
-            <div class="card card-pad">
-              <h3>合作产业方向</h3>
-              <div class="pill-row" style="margin-top:18px;">${(club.industries || []).map(item => `<span class="pill">🏭 ${esc(item)}</span>`).join('')}</div>
-            </div>
+          <div class="grid grid-3">
+            ${projects.map(project => projectCard(project)).join('')}
           </div>
-          ${club.updateDate ? `<p class="muted small" style="text-align:center;margin-top:24px;">最近更新：${esc(club.updateDate)}</p>` : ''}
+          <div style="text-align:center;margin-top:28px;">${btn('#/projects', '查看全部项目', 'secondary')}</div>
         </div>
       </section>
     </div>`;
