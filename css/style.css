@@ -111,6 +111,9 @@ p { margin: 0; }
 .project-card:before { content: ""; position: absolute; inset: 0 0 auto 0; height: 5px; background: linear-gradient(90deg, var(--primary), #60a5fa); }
 .project-card h3 { padding-top: 4px; }
 .home-project-grid .project-card { min-height: 288px; }
+.project-list-grid { grid-template-columns: 1fr; }
+.project-list-grid .project-card { min-height: 220px; grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
+.project-list-grid .project-card .pill-row { grid-column: 1 / -1; }
 .project-meta { display: grid; gap: 8px; color: #64748b; font-size: 13px; }
 .project-meta span { display: flex; gap: 8px; align-items: flex-start; }
 .countdown { display: inline-flex; gap: 8px; align-items: center; justify-content: center; margin-top: 18px; padding: 10px 14px; border-radius: 999px; background: var(--primary-soft); color: var(--primary); font-weight: 750; }
@@ -150,8 +153,6 @@ ul.clean li:before { content: "›"; color: var(--primary); font-weight: 900; ma
 .site-footer { background: #0f172a; color: rgba(255,255,255,.72); padding: 36px 0; margin-top: 40px; }
 .footer-grid { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
 .footer-brand { color: #fff; font-weight: 900; font-size: 18px; margin-bottom: 4px; }
-.footer-links { display: flex; gap: 16px; }
-.footer-links a:hover { color: #fff; }
 .fade-in { animation: fadeIn .35s ease both; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
 
@@ -160,6 +161,8 @@ ul.clean li:before { content: "›"; color: var(--primary); font-weight: 900; ma
   .mobile-menu-button { display: block; }
   .hero-inner { grid-template-columns: 1fr; min-height: auto; padding: 64px 0; }
   .hero-panel { transform: none; }
+  .project-list-grid .project-card { grid-template-columns: 1fr; align-items: stretch; }
+  .project-list-grid .project-card .pill-row { grid-column: auto; }
   .grid-2, .grid-3, .grid-4, .detail-meta-grid, .recruitment-grid { grid-template-columns: 1fr; }
   .guide-card { grid-template-columns: auto 1fr; }
   .guide-card .btn { grid-column: 2; justify-self: start; }

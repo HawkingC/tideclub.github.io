@@ -204,7 +204,7 @@
               ${domains.map(domain => `<button class="filter-btn" data-domain-filter="${esc(domain.id)}">${esc(domain.name)}</button>`).join('')}
             </div>
           </div>
-          <div class="grid grid-3" id="project-grid">${projects.map(project => projectCard(project)).join('')}</div>
+          <div class="grid project-list-grid" id="project-grid">${projects.map(project => projectCard(project)).join('')}</div>
           <div class="empty-state no-results" id="no-results"><h2>没有找到匹配项目</h2><p class="muted">可以换一个关键词，或切换到“全部方向”。</p></div>
         </div>
       </section>
